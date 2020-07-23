@@ -1,3 +1,8 @@
+UserRegistration/.vs
+UserRegistration/UserRegistration/UserRegistration.csproj
+UserRegistration/UserRegistration/bin
+UserRegistration/UserRegistration/obj
+
 # Compiled class file
 *.class
 

@@ -8,9 +8,22 @@ namespace UserRegistration
     public class UserDetails
     {
         public static string NAME_PATTERN = "^[A-Z][a-z]{3,}$";
+        
         public bool FirstNameValidation(string firstName)
         {
             if (Regex.IsMatch(firstName,NAME_PATTERN))
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
+
+        public bool LastNameValidation(string lastName)
+        {
+            if (Regex.IsMatch(lastName, NAME_PATTERN))
             {
                 return true;
             }

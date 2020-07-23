@@ -27,5 +27,11 @@ namespace UserRegistrationTest
             bool isValid = validation.EmailValidation("mrn.xyz@bl.co.in");
             Assert.IsTrue(isValid);
         }
+        public void TestForChecking_MobileFormat()
+        {
+            UserRegistration.UserDetails validation = new UserRegistration.UserDetails();
+            bool isValid = validation.MobileValidation("91 9326265360");
+            Assert.IsTrue(isValid);
+        }
     }
 }

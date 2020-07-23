@@ -2,6 +2,10 @@ UserRegistration/.vs
 UserRegistration/UserRegistration/UserRegistration.csproj
 UserRegistration/UserRegistration/bin
 UserRegistration/UserRegistration/obj
+UserRegistration/NUnitTestProject1/NUnitTestProject1.csproj
+UserRegistration/NUnitTestProject1/obj/
+UserRegistration/UserRegistrationTest/
+
 
 # Compiled class file
 *.class

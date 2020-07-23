@@ -4,7 +4,9 @@ UserRegistration/UserRegistration/bin
 UserRegistration/UserRegistration/obj
 UserRegistration/NUnitTestProject1/NUnitTestProject1.csproj
 UserRegistration/NUnitTestProject1/obj/
-UserRegistration/UserRegistrationTest/
+UserRegistration/UserRegistrationTest/UserRegistrationTest.csproj
+UserRegistration/UserRegistrationTest/bin
+UserRegistration/UserRegistrationTest/obj
 
 
 # Compiled class file

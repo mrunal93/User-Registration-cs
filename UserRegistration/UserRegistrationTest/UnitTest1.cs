@@ -63,5 +63,12 @@ namespace UserRegistrationTest
             bool isValid = validation.Password_Validation_Rule("Mrunal26nas");
             Assert.IsTrue(isValid);
         }
+        [Test]
+        public void TestForChecking_PasswordFormat_OneSpecialCharacter()
+        {
+            UserRegistration.UserDetails validation = new UserRegistration.UserDetails();
+            bool isValid = validation.Password_Validation_Rule("Mrunal@nas");
+            Assert.IsTrue(isValid);
+        }
     }
 }

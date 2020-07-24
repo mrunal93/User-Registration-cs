@@ -11,6 +11,9 @@ namespace UserRegistration
         static string EMAIL_PATTERN= "^[a-z0-9]+([._+-][0-9a-z]+)@+[a-z0-9]+.[a-z]{2,4}([.][a-z]{2}$)";
         static string MOBILE_PATTER = "^[1-9]{2}[: :][0-9]{10}$";
         static string PASSWORD_PATTER = "^([A-Za-z0-9])*[!@#$%^&*]{1}([A-Za-z0-9])*$";
+        static string EMAIL_PATTER_ALL= "^([a-z0-9.+-]+)@([a-z0-9-]+).([a-z]{2,8})(.[a-z]{2,8})?$";
+
+
         public bool FirstNameValidation(string firstName)
         {
             if (Regex.IsMatch(firstName,NAME_PATTERN))
@@ -60,6 +63,17 @@ namespace UserRegistration
         public bool Password_Validation_Rule(string password)
         {
             if (Regex.IsMatch(password, PASSWORD_PATTER))
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
+        public bool EmailValidation_ForAllEmail(string email)
+        {
+            if (Regex.IsMatch(email,EMAIL_PATTER_ALL))
             {
                 return true;
             }

@@ -46,21 +46,21 @@ namespace UserRegistrationTest
         public void TestForChecking_PasswordFormat_LeasOneLoweCase()
         {
             UserRegistration.UserDetails validation = new UserRegistration.UserDetails();
-            bool isValid = validation.Password_Validation_Rule("mrunalnas");
+            bool isValid = validation.Password_Validation_Rule("mrunal@nas");
             Assert.IsTrue(isValid);
         }
         [Test]
         public void TestForChecking_PasswordFormat_LestOneUpperCase()
         {
             UserRegistration.UserDetails validation = new UserRegistration.UserDetails();
-            bool isValid = validation.Password_Validation_Rule("Mrunalnas");
+            bool isValid = validation.Password_Validation_Rule("Mrunal#nas");
             Assert.IsTrue(isValid);
         }
         [Test]
         public void TestForChecking_PasswordFormat_OneNumeric()
         {
             UserRegistration.UserDetails validation = new UserRegistration.UserDetails();
-            bool isValid = validation.Password_Validation_Rule("Mrunal26nas");
+            bool isValid = validation.Password_Validation_Rule("Mrunal@26nas");
             Assert.IsTrue(isValid);
         }
         [Test]
@@ -68,6 +68,34 @@ namespace UserRegistrationTest
         {
             UserRegistration.UserDetails validation = new UserRegistration.UserDetails();
             bool isValid = validation.Password_Validation_Rule("Mrunal@nas");
+            Assert.IsTrue(isValid);
+        }
+        [Test]
+        public void TestForChecking_Email_ForPatter2()
+        {
+            UserRegistration.UserDetails validation = new UserRegistration.UserDetails();
+            bool isValid = validation.EmailValidation_ForAllEmail("abc-100@yahoo.com");
+            Assert.IsTrue(isValid);
+        }
+        [Test]
+        public void TestForChecking_Email_ForPatter3()
+        {
+            UserRegistration.UserDetails validation = new UserRegistration.UserDetails();
+            bool isValid = validation.EmailValidation_ForAllEmail("abc.100@yahoo.com");
+            Assert.IsTrue(isValid);
+        }
+        [Test]
+        public void TestForChecking_Email_ForPatter4()
+        {
+            UserRegistration.UserDetails validation = new UserRegistration.UserDetails();
+            bool isValid = validation.EmailValidation_ForAllEmail("abc+100@gmail.com");
+            Assert.IsTrue(isValid);
+        }
+        [Test]
+        public void TestForChecking_Email_ForPatter5()
+        {
+            UserRegistration.UserDetails validation = new UserRegistration.UserDetails();
+            bool isValid = validation.EmailValidation_ForAllEmail("abc.100@abc.com.au");
             Assert.IsTrue(isValid);
         }
     }

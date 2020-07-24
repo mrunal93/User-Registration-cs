@@ -46,7 +46,14 @@ namespace UserRegistrationTest
         public void TestForChecking_PasswordFormat_Rule1()
         {
             UserRegistration.UserDetails validation = new UserRegistration.UserDetails();
-            bool isValid = validation.Password_Validation_Rule1("mrunalnas");
+            bool isValid = validation.Password_Validation_Rule("mrunalnas");
+            Assert.IsTrue(isValid);
+        }
+        [Test]
+        public void TestForChecking_PasswordFormat_Rule2()
+        {
+            UserRegistration.UserDetails validation = new UserRegistration.UserDetails();
+            bool isValid = validation.Password_Validation_Rule("Mrunalnas");
             Assert.IsTrue(isValid);
         }
     }

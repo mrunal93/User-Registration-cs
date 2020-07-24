@@ -39,21 +39,28 @@ namespace UserRegistrationTest
         public void TestForChecking_MobileFormat_ForPlus()
         {
             UserRegistration.UserDetails validation = new UserRegistration.UserDetails();
-            bool isValid = validation.MobileValidation("+91 9326265360");
+            bool isValid = validation.MobileValidation("91 9326265360");
             Assert.IsTrue(isValid);
         }
         [Test]
-        public void TestForChecking_PasswordFormat_Rule1()
+        public void TestForChecking_PasswordFormat_LeasOneLoweCase()
         {
             UserRegistration.UserDetails validation = new UserRegistration.UserDetails();
             bool isValid = validation.Password_Validation_Rule("mrunalnas");
             Assert.IsTrue(isValid);
         }
         [Test]
-        public void TestForChecking_PasswordFormat_Rule2()
+        public void TestForChecking_PasswordFormat_LestOneUpperCase()
         {
             UserRegistration.UserDetails validation = new UserRegistration.UserDetails();
             bool isValid = validation.Password_Validation_Rule("Mrunalnas");
+            Assert.IsTrue(isValid);
+        }
+        [Test]
+        public void TestForChecking_PasswordFormat_OneNumeric()
+        {
+            UserRegistration.UserDetails validation = new UserRegistration.UserDetails();
+            bool isValid = validation.Password_Validation_Rule("Mrunal26nas");
             Assert.IsTrue(isValid);
         }
     }

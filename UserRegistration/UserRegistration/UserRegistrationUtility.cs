@@ -5,7 +5,7 @@ using System.Text.RegularExpressions;
 
 namespace UserRegistration
 {
-    public class UserDetails
+    public class UserRegistrationUtility
     {
         static string NAME_PATTERN = "^[A-Z][a-z]{3,}$";
         static string EMAIL_PATTERN= "^[a-z0-9]+([._+-][0-9a-z]+)@+[a-z0-9]+.[a-z]{2,4}([.][a-z]{2}$)";
@@ -14,28 +14,22 @@ namespace UserRegistration
         static string EMAIL_PATTER_ALL= "^([a-z0-9.+-]+)@([a-z0-9-]+).([a-z]{2,8})(.[a-z]{2,8})?$";
 
 
-        public bool FirstNameValidation(string firstName)
+        public bool ValidationFirstName(string firstName)
         {
             if (Regex.IsMatch(firstName,NAME_PATTERN))
             {
                 return true;
             }
-            else
-            {
-                return false;
-            }
+            return false;
         }
 
-        public bool LastNameValidation(string lastName)
+        public bool ValidationLastName(string lastName)
         {
             if (Regex.IsMatch(lastName, NAME_PATTERN))
             {
                 return true;
             }
-            else
-            {
-                return false;
-            }
+            return false;
         }
         public bool EmailValidation(string email)
         {
@@ -43,10 +37,7 @@ namespace UserRegistration
             {
                 return true;
             }
-            else
-            {
-                return false;
-            }
+            return false;
         }
         public bool MobileValidation(string mobile)
         {
